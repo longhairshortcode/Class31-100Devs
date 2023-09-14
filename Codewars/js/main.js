@@ -81,3 +81,68 @@ printer_error(s) => "8/22"
 // someones else' code that I learned and now get:
 
 let printerError = s => `${s.replace(/[a-m]/gi, "").length}/${s.length}` 
+
+
+
+#####################################################################################################
+
+
+// Codewars for class 31 9.14.23
+
+
+// task: 
+Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
+
+For example,
+
+[true,  true,  true,  false,
+  true,  true,  true,  true ,
+  true,  false, true,  false,
+  true,  false, false, true ,
+  true,  true,  true,  true ,
+  false, false, true,  true]
+The correct answer would be 17.
+
+Hint: Don't forget to check for bad values like null/undefined
+
+//my code:
+
+function countSheeps(sheep) {
+  let total = 0
+  total = sheep.filter(sheep => sheep === true).length 
+  return total;
+  }
+
+
+  #####################################################################################################
+
+  //task
+
+  Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+
+
+  //my code:
+
+  const evenOrOdd = number => number % 2 === 0 ? "Even" : "Odd"
+
+
+
+
+  #####################################################################################################
+
+  //task
+  Complete the solution so that the function will break up camel casing, using a space between words.
+
+  Example
+  "camelCasing"  =>  "camel Casing"
+  "identifier"   =>  "identifier"
+  ""             =>  ""
+
+
+  //mycode:
+
+  // complete the function
+function solution(string){
+  return string.replace(/([a-z])([A-Z])/g, '$1 $2');
+ 
+}
